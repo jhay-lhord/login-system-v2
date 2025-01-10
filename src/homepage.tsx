@@ -1,5 +1,8 @@
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
+  const navigate = useNavigate()
+
   return (
     <div className="min-h-screen bg-gray-50 flex">
   {/* Sidebar */}
@@ -8,7 +11,8 @@ const HomePage = () => {
       <h2 className="text-xl uppercase tracking-wider">Final Exam</h2>
     </div>
     <nav className="flex-1 p-4 space-y-4">
-      <button className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-4 rounded-lg shadow-md transition-transform transform hover:scale-105">
+      <button className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-4 rounded-lg shadow-md transition-transform transform hover:scale-105"
+      onClick={() => navigate("/user-information")}>
         User Information
       </button>
     </nav>
