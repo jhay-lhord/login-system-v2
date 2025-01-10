@@ -37,6 +37,8 @@ export default function Login() {
     resolver: zodResolver(loginSchema),
   });
 
+  //FIX
+
   const onSubmit = async (data: userLoginType) => {
     setIsLoading(true);
     await checkUser(
@@ -133,6 +135,7 @@ export default function Login() {
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-2">
                   <Checkbox id="remember" />
+                  
                   <Label htmlFor="remember" className="text-sm font-medium">
                     Remember me
                   </Label>
